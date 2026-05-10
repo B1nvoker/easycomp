@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Hero({ onStartQuiz }: { onStartQuiz: () => void }) {
   return (
-    <section className="relative min-h-[90vh] pt-32 pb-20 overflow-hidden flex items-center">
+    <section id="quiz" className="relative min-h-[90vh] pt-32 pb-20 overflow-hidden flex items-center">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full" />
@@ -48,6 +48,7 @@ export default function Hero({ onStartQuiz }: { onStartQuiz: () => void }) {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Заказать подбор игрового компьютера"
               className="px-10 py-6 bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white font-black rounded-3xl shadow-[0_0_50px_rgba(6,182,212,0.3)] transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest"
               onClick={onStartQuiz}
             >
@@ -56,6 +57,7 @@ export default function Hero({ onStartQuiz }: { onStartQuiz: () => void }) {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Посмотреть популярные готовые сборки"
               className="px-10 py-6 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold rounded-3xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest"
               onClick={() => document.getElementById('popular-builds')?.scrollIntoView({ behavior: 'smooth' })}
             >
@@ -74,9 +76,12 @@ export default function Hero({ onStartQuiz }: { onStartQuiz: () => void }) {
           <div className="relative z-10 w-full">
             <img 
               src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=1200" 
-              alt="Premium Gaming PC" 
+              alt="Мощный игровой компьютер EasyComp с водяным охлаждением и RTX 5090" 
               className="w-full h-auto object-contain rounded-[40px] shadow-[0_0_100px_rgba(168,85,247,0.3)] border border-white/5"
               referrerPolicy="no-referrer"
+              loading="eager"
+              width="1200"
+              height="800"
             />
             
             {/* Overlay Specs */}

@@ -9,7 +9,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="steps" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
       <div className="text-center mb-20">
         <h2 className="font-display text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Как мы <br/> <span className="text-cyan-400">работаем</span></h2>
       </div>

@@ -29,13 +29,13 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-6 max-w-4xl mx-auto">
+    <section id="faq" className="py-24 px-6 max-w-4xl mx-auto scroll-mt-20">
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 text-cyan-400 mb-4">
           <HelpCircle size={20} />
           <span className="font-black uppercase tracking-[0.3em] text-[10px]">Information</span>
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter italic">FAQ</h2>
+        <h2 className="font-display text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter italic">Часто задаваемые вопросы</h2>
       </div>
 
       <div className="space-y-4">
@@ -43,6 +43,7 @@ export default function FAQ() {
           <div key={index} className="glass-card border-white/10 overflow-hidden bg-white/[0.02]">
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              aria-expanded={openIndex === index}
               className="w-full p-6 text-left flex items-center justify-between hover:bg-white/[0.03] transition-colors"
             >
               <span className="font-black text-sm uppercase tracking-tight pr-8">{faq.q}</span>
@@ -50,13 +51,13 @@ export default function FAQ() {
                 {openIndex === index ? <Minus size={16} className="text-cyan-400" /> : <Plus size={16} className="text-slate-500" />}
               </div>
             </button>
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               {openIndex === index && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                 >
                   <div className="px-6 pb-6 text-slate-400 font-medium text-xs leading-relaxed border-t border-white/5 pt-4">
                     {faq.a}

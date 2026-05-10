@@ -5,7 +5,7 @@ export default function Logo({ className = "h-10" }: { className?: string }) {
     <div className={`relative flex items-center ${className} group`}>
       <img 
         src="https://storage.googleapis.com/test-proxy-public/ais-artifact-d18e578c-0f9c-4384-903b-df9c1a5b8f9a/logo_easycomp_transparent.png" 
-        alt="Easycomp Logo"
+        alt="EasyComp — Магазин игровых компьютеров в Беларуси"
         className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(6,182,212,0.3)] group-hover:scale-105 transition-transform duration-500"
         referrerPolicy="no-referrer"
         onError={(e) => {

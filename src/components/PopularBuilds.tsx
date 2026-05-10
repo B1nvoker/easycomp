@@ -75,9 +75,12 @@ export default function PopularBuilds() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img 
                   src={pc.image} 
-                  alt={pc.name} 
+                  alt={`Игровой ПК ${pc.name} - ${pc.gpu}, ${pc.cpu}, ${pc.ram}`} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  width="800"
+                  height="500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
                 

@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 
 export default function Comparison() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="why-us" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
       <div className="text-center mb-16">
         <h2 className="font-display text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Почему <span className="text-cyan-400">мы?</span></h2>
         <p className="text-slate-400 font-medium">Мы делаем ставку на качество и поддержку каждого клиента</p>
@@ -34,9 +34,12 @@ export default function Comparison() {
           <div className="relative aspect-video rounded-3xl overflow-hidden group">
             <img 
               src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=80&w=800" 
-              alt="Build Process" 
+              alt="Процесс профессиональной сборки игрового компьютера в EasyComp" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              width="800"
+              height="450"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-bottom p-8">
               <p className="text-white/90 text-sm font-medium mt-auto">

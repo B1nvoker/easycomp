@@ -265,6 +265,7 @@ export default function ConsultationModal({ isOpen, onClose }: QuizModalProps) {
 
               <button 
                 onClick={handleSubmit}
+                aria-label="Отправить заявку на сборку ПК"
                 disabled={isSubmitting || !formData.name || !validatePhone(formData.phone)}
                 className="w-full py-6 bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white font-black rounded-2xl uppercase text-sm tracking-[0.2em] shadow-xl shadow-cyan-500/20 disabled:opacity-40 disabled:grayscale disabled:cursor-not-allowed group relative overflow-hidden"
               >

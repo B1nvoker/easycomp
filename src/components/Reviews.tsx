@@ -66,9 +66,12 @@ export default function Reviews() {
                 <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-cyan-500/30 p-0.5 group-hover:border-cyan-500 transition-colors duration-500">
                   <img 
                     src={rev.image} 
-                    alt={rev.name} 
+                    alt={`Отзыв от ${rev.name} о покупке ${rev.model}`} 
                     className="w-full h-full object-cover rounded-full transition-all duration-700 group-hover:scale-125"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    width="60"
+                    height="60"
                   />
                 </div>
                 <div>

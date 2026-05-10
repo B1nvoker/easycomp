@@ -64,9 +64,13 @@ export default function Footer() {
   );
 }
 
-function SocialLink({ icon }: { icon: React.ReactNode }) {
+function SocialLink({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <a href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+    <a 
+      href="#" 
+      aria-label={label}
+      className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition-all"
+    >
       {icon}
     </a>
   );
