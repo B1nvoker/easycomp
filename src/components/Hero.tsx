@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Zap, ShieldCheck, CreditCard, Play } from "lucide-react";
 import React from "react";
 
-export default function Hero() {
+export default function Hero({ onStartQuiz }: { onStartQuiz: () => void }) {
   return (
     <section className="relative min-h-[90vh] pt-32 pb-20 overflow-hidden flex items-center">
       {/* Background Effects */}
@@ -26,9 +26,9 @@ export default function Hero() {
             <span className="text-[10px] font-black tracking-widest uppercase text-white/80">№1 В БЕЛАРУСИ</span>
           </div>
           
-          <h1 className="font-display text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 uppercase italic">
+          <h1 className="font-display text-5xl md:text-6xl font-black leading-[1.2] tracking-tight mb-8 uppercase italic py-2">
             ИГРОВЫЕ ПК <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-600">В РАССРОЧКУ</span> <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-600 px-2 leading-normal">В РАССРОЧКУ</span> <br/>
             БЕЗ ПЕРЕПЛАТ
           </h1>
           
@@ -49,7 +49,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-6 bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white font-black rounded-3xl shadow-[0_0_50px_rgba(6,182,212,0.3)] transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest"
-              onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={onStartQuiz}
             >
               ПОДОБРАТЬ ПК <span className="text-xl">→</span>
             </motion.button>
@@ -57,6 +57,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-6 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold rounded-3xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 uppercase text-sm tracking-widest"
+              onClick={() => document.getElementById('popular-builds')?.scrollIntoView({ behavior: 'smooth' })}
             >
               СМОТРЕТЬ СБОРКИ <span className="opacity-50">▷</span>
             </motion.button>
@@ -72,32 +73,31 @@ export default function Hero() {
         >
           <div className="relative z-10 w-full">
             <img 
-              src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=1200" 
+              src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=1200" 
               alt="Premium Gaming PC" 
-              className="w-full h-auto object-contain rounded-[40px] shadow-[0_0_100px_rgba(0,229,255,0.3)] border border-white/5"
+              className="w-full h-auto object-contain rounded-[40px] shadow-[0_0_100px_rgba(168,85,247,0.3)] border border-white/5"
               referrerPolicy="no-referrer"
             />
             
             {/* Overlay Specs */}
             <div className="absolute top-[-5%] right-[5%] z-20">
-              <FloatingBadge title="RTX 5070" subtitle="12GB GDDR7" />
+              <FloatingBadge title="RTX 5090" subtitle="32GB GDDR7" color="fuchsia" />
             </div>
             <div className="absolute top-[15%] left-[-10%] z-20">
-              <FloatingBadge title="144+ FPS" subtitle="Cyberpunk 2077" color="cyan" />
+              <FloatingBadge title="240+ FPS" subtitle="4K Ultra" color="cyan" />
             </div>
             <div className="absolute bottom-[40%] right-[-10%] z-20">
-              <FloatingBadge title="32GB" subtitle="DDR5 6000MHz" />
+              <FloatingBadge title="64GB" subtitle="DDR5 7200MHz" color="fuchsia" />
             </div>
             <div className="absolute bottom-[20%] right-[0%] z-20">
               <FloatingBadge title="1TB" subtitle="NVMe SSD" color="fuchsia" />
             </div>
             <div className="absolute bottom-[5%] left-[20%] z-20">
-              <FloatingBadge title="Ryzen 7" subtitle="7800X3D" />
+              <FloatingBadge title="Ryzen 9" subtitle="9950X3D" color="cyan" />
             </div>
           </div>
           
-          {/* Background Glow */}
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full bg-cyan-500/20 blur-[150px] -z-10 rounded-full scale-110 pointer-events-none" />
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full bg-fuchsia-600/20 blur-[150px] -z-10 rounded-full scale-110 pointer-events-none" />
         </motion.div>
       </div>
     </section>

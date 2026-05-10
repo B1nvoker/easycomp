@@ -10,8 +10,8 @@ export default function Comparison() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="glass-card overflow-hidden border-white/10">
-          <table className="w-full text-left">
+        <div className="glass-card overflow-x-auto border-white/10">
+          <table className="w-full text-left min-w-[500px]">
             <thead>
               <tr className="border-bottom border-white/10">
                 <th className="p-6 text-[10px] font-black uppercase text-slate-500 tracking-[0.2em]">Особенности</th>

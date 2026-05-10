@@ -30,7 +30,7 @@ const stats = [
 
 export default function TrustBlock() {
   return (
-    <section id="trust" className="py-20 px-6 max-w-7xl mx-auto">
+    <section id="why-us" className="py-20 px-6 max-w-7xl mx-auto scroll-mt-20">
       <div className="text-center mb-16">
         <h2 className="font-display text-4xl md:text-5xl font-black tracking-tight mb-4 uppercase">ПОЧЕМУ МЫ</h2>
         <p className="text-slate-400 font-medium">Лучший сервис по сборке и продаже игровых систем в Беларуси</p>

@@ -13,16 +13,12 @@ export default function Footer() {
           <p className="text-[11px] text-slate-500 font-bold uppercase tracking-widest leading-relaxed mb-6">
             Первый в Беларуси премиальный сервис по сборке игровых систем в честную рассрочку без переплат.
           </p>
-          <div className="flex gap-3">
-            <SocialLink icon={<Instagram size={18} />} />
-            <SocialLink icon={<Send size={18} />} />
-            <SocialLink icon={<Github size={18} />} />
-          </div>
         </div>
 
         <div>
           <h4 className="font-black mb-6 text-[10px] uppercase tracking-[0.3em] text-slate-600">Навигация</h4>
           <ul className="space-y-3 text-[11px] text-slate-400 font-black uppercase tracking-widest">
+            <li><a href="#popular-builds" className="hover:text-cyan-400 transition-colors">Сборки</a></li>
             <li><a href="#why-us" className="hover:text-cyan-400 transition-colors">Почему мы</a></li>
             <li><a href="#trust" className="hover:text-cyan-400 transition-colors">Отзывы</a></li>
             <li><a href="#faq" className="hover:text-cyan-400 transition-colors">Вопросы</a></li>
@@ -33,13 +29,26 @@ export default function Footer() {
           <h4 className="font-black mb-6 text-[10px] uppercase tracking-[0.3em] text-slate-600">Связь</h4>
           <div className="space-y-4">
             <div>
-              <div className="text-[9px] uppercase font-black text-slate-700 mb-1 tracking-widest leading-none">Минск, пр-т Победителей 10</div>
               <a href="tel:+375333857085" className="text-xl font-display font-black text-white hover:text-cyan-400 transition-colors leading-none tracking-tighter uppercase">+375 (33) 385-70-85</a>
             </div>
             <div>
               <div className="text-[9px] uppercase font-black text-slate-700 mb-1 tracking-widest leading-none">Email</div>
               <a href="mailto:info@easycomp.by" className="text-sm font-black text-slate-400 hover:text-white transition-colors uppercase tracking-widest italic">info@easycomp.by</a>
             </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-black mb-6 text-[10px] uppercase tracking-[0.3em] text-slate-600">Юридическая информация</h4>
+          <div className="space-y-4 text-[9px] text-slate-500 font-bold uppercase tracking-widest leading-relaxed">
+            <p>ИП Сушко Игорь Леонидович</p>
+            <p>Юр.адрес: 225413, г. Барановичи, ул. Железнодорожная, д. 46</p>
+            <p>Свидетельство № 291676056 от 12.11.2020, Барановичский горисполком</p>
+            <p>В торговом реестре с 25 ноября 2020 г., № регистрации 496956</p>
+            <p className="text-slate-600 pt-2 border-t border-white/5">
+              Уполномоченные рассматривать обращения покупателей (горисполком): <br />
+              <span className="text-slate-400">8 (0163) 65-17-13</span>
+            </p>
           </div>
         </div>
       </div>

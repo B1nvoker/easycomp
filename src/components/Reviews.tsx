@@ -63,11 +63,11 @@ export default function Reviews() {
           >
             <div className="glass-card p-6 h-full border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition-all">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 border border-white/10">
+                <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-cyan-500/30 p-0.5 group-hover:border-cyan-500 transition-colors duration-500">
                   <img 
                     src={rev.image} 
                     alt={rev.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover rounded-full transition-all duration-700 group-hover:scale-125"
                     referrerPolicy="no-referrer"
                   />
                 </div>
